@@ -1,0 +1,8 @@
+C:\Users\Shai\source\repos\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\Shai\source\repos\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\Shai\source\repos\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\Shai\source\repos\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Users\Shai\source\repos\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\Shai\source\repos\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\optimized\
+C:\Users\Shai\source\repos\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\NoteIt.iOS.csprojAssemblyReference.cache
+C:\Users\Shai\source\repos\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\NoteIt.iOS.csproj.CoreCompileInputs.cache
