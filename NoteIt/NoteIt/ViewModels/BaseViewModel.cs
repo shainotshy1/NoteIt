@@ -33,6 +33,12 @@ namespace NoteIt.ViewModels
             get { return isRecording; }
             set { SetProperty(ref isRecording, value); } 
         }
+        string imageSource = string.Empty;
+        public string ImageSource
+        {
+            get { return imageSource; }
+            set { SetProperty(ref imageSource, value); }
+        }
 
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",

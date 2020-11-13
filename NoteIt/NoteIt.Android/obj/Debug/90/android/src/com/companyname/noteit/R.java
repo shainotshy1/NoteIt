@@ -4574,11 +4574,12 @@ public final class R {
     public static final int notification_tile_bg=0x7f070072;
     public static final int notify_panel_notification_icon_bg=0x7f070073;
     public static final int recording=0x7f070074;
-    public static final int tab_about=0x7f070075;
-    public static final int tab_feed=0x7f070076;
-    public static final int tooltip_frame_dark=0x7f070077;
-    public static final int tooltip_frame_light=0x7f070078;
-    public static final int xamarin_logo=0x7f070079;
+    public static final int recording2=0x7f070075;
+    public static final int tab_about=0x7f070076;
+    public static final int tab_feed=0x7f070077;
+    public static final int tooltip_frame_dark=0x7f070078;
+    public static final int tooltip_frame_light=0x7f070079;
+    public static final int xamarin_logo=0x7f07007a;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

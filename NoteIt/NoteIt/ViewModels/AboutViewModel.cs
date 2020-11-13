@@ -9,15 +9,23 @@ namespace NoteIt.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "Note It";
+            Title = "Recording";
             IsRecording = "Not Recording:(";
+            ImageSource = "recording.png";
 
             Recording = new Command(() =>
             {
                 if (IsRecording == "Not Recording:(")
+                {
                     IsRecording = "Recording!";
+                    ImageSource = "recording2.png";
+                }
+
                 else
+                {
                     IsRecording = "Not Recording:(";
+                    ImageSource = "recording.png";
+                }
             });
         }
 

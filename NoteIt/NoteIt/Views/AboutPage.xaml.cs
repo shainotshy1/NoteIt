@@ -14,8 +14,8 @@ namespace NoteIt.Views
 
         private async void recordingButton_Clicked(object sender, EventArgs e)
         {
-            await recordingButton.ScaleTo(.4, 250, Easing.BounceIn);
-            await recordingButton.ScaleTo(.3, 250, Easing.BounceOut);
+            await recordingButton.ScaleTo(.35, 180, Easing.BounceIn);
+            await recordingButton.ScaleTo(.3, 180, Easing.BounceOut);
         }
     }
 }
