@@ -934,3 +934,4 @@ C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\stamp\_ConvertRe
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\res\drawable\recording.png

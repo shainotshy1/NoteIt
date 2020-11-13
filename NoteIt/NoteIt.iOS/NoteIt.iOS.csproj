@@ -142,4 +142,7 @@
       <Name>NoteIt</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\recording.png" />
+  </ItemGroup>
 </Project>

@@ -11,5 +11,11 @@ namespace NoteIt.Views
         {
             InitializeComponent();
         }
+
+        private async void recordingButton_Clicked(object sender, EventArgs e)
+        {
+            await recordingButton.ScaleTo(.4, 250, Easing.BounceIn);
+            await recordingButton.ScaleTo(.3, 250, Easing.BounceOut);
+        }
     }
 }

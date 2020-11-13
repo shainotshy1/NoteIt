@@ -17,22 +17,19 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="4*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Label Text="NoteIt" VerticalOptions="Center" FontSize="Title"/>
-                </ContentView>
-            </StackLayout>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.ColumnSpan="3" Orientation="Vertical" Spacing="10" VerticalOptions="End">
+            <Label Text="{Binding IsRecording}" FontSize="16" Padding="0,0,0,0" HorizontalTextAlignment="Center"/>
         </StackLayout>
-        <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Poopity Scoop" FontSize="Title"/>
-                <Label Text="xxx" FontSize="16" Padding="0,0,0,0"/>
-            </StackLayout>
-        </ScrollView>
+        <ImageButton x:Name="recordingButton" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Start"
+                BackgroundColor="Transparent" Source="recording" Scale="0.3" Clicked="recordingButton_Clicked" Command="{Binding Recording}"/>
     </Grid>
 
 </ContentPage>

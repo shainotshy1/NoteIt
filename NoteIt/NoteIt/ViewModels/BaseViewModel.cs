@@ -27,6 +27,12 @@ namespace NoteIt.ViewModels
             get { return title; }
             set { SetProperty(ref title, value); }
         }
+        string isRecording = string.Empty;
+        public string IsRecording 
+        {
+            get { return isRecording; }
+            set { SetProperty(ref isRecording, value); } 
+        }
 
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",
