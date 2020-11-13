@@ -984,11 +984,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt.iOS\\NoteIt.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.iOS\\NoteIt.iOS.csproj",
       "projectName": "NoteIt.iOS",
-      "projectPath": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt.iOS\\NoteIt.iOS.csproj",
+      "projectPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.iOS\\NoteIt.iOS.csproj",
       "packagesPath": "C:\\Users\\Shai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt.iOS\\obj\\",
+      "outputPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1009,8 +1009,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj": {
-              "projectPath": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj"
+            "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj": {
+              "projectPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj"
             }
           }
         }

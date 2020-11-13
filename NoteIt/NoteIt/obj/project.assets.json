@@ -634,11 +634,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj",
+      "projectUniqueName": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj",
       "projectName": "NoteIt",
-      "projectPath": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj",
+      "projectPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj",
       "packagesPath": "C:\\Users\\Shai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt\\obj\\",
+      "outputPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -1936,11 +1936,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj",
       "projectName": "NoteIt.Android",
-      "projectPath": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj",
+      "projectPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj",
       "packagesPath": "C:\\Users\\Shai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt.Android\\obj\\",
+      "outputPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1961,8 +1961,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj": {
-              "projectPath": "C:\\Users\\Shai\\source\\repos\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj"
+            "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj": {
+              "projectPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj"
             }
           }
         }
