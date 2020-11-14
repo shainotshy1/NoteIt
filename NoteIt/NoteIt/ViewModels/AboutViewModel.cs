@@ -12,7 +12,7 @@ namespace NoteIt.ViewModels
         public AboutViewModel()
         {
             Title = "Recording";
-            IsRecording = "Not Recording:(";
+            IsRecording = "";
             ImageSource = "recording.png";
 
             Notes = new ObservableCollection<Note>();
@@ -21,7 +21,7 @@ namespace NoteIt.ViewModels
 
             Recording = new Command(() =>
             {
-                if (IsRecording == "Not Recording:(")
+                if (IsRecording == "")
                 {
                     IsRecording = "Recording!";
                     ImageSource = "recording2.png";
@@ -29,7 +29,7 @@ namespace NoteIt.ViewModels
 
                 else
                 {
-                    IsRecording = "Not Recording:(";
+                    IsRecording = "";
                     ImageSource = "recording.png";
                 }
             });

@@ -4,7 +4,7 @@
              x:Class="NoteIt.Views.AboutPage"
              xmlns:vm="clr-namespace:NoteIt.ViewModels"
              Title="{Binding Title}"
-             BackgroundColor="#6F49FA">
+             BackgroundColor="#9B72FA">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Test"
