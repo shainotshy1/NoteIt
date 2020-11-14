@@ -36,27 +36,14 @@ namespace NoteIt.ViewModels
 
             NewNote = new Command(() =>
             {
-
-                NoteCount++;
-
-                var recipe = new Note { Id = NoteCount, Text = "This is a sample note" };
-
-                if(Notes[Notes.Count-1].Id != NoteCount)
-                {
-                    /*for (int i = currentMaxIndex; i < currentMaxIndex + 14; i++)
-                            {
-                                if(NotesCache.Count - 1 < i)
-                                {
-                                    break;
-                                }
-                                Notes.Add(NotesCache[i]);
-                            }*/
-                }
                 if (Notes.Count % 14 == 0)
                 {
                     Notes.Clear();
                 }
 
+                NoteCount++;
+
+                var recipe = new Note { Id = NoteCount, Text = "This is a sample note" };
                 Notes.Add(recipe);
                 NotesCache.Add(recipe);
             });
