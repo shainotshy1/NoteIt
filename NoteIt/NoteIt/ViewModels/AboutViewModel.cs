@@ -25,6 +25,7 @@ namespace NoteIt.ViewModels
             Notes = new ObservableCollection<Note>();
             NotesCache = new ObservableCollection<Note>();
             NoteCount = 0;
+            NoteLength = 0;
 
             Recording = new Command(async () =>
             {
@@ -65,20 +66,34 @@ namespace NoteIt.ViewModels
                         UpdateTranscription(ex.Message);
                     }
 
-                    if (Notes.Count % 14 == 0 && NoteCount > 0)
+                    if (Notes.Count % 14 == 0 && NoteLength > 0)
                     {
                         Notes.Clear();
-                        for (int i = NoteCount - NoteCount % 14; i < NoteCount; i++)
+                        for (int i = NoteLength - NoteLength % 14; i < NoteLength; i++)
                         {
                             Notes.Add(NotesCache[i]);
                         }
                     }
-
                     NoteCount++;
+                    NoteLength++;
 
-                    var recipe = new Note { Id = NoteCount, Text = TextNote };
-                    Notes.Add(recipe);
-                    NotesCache.Add(recipe);
+                    string shiftedId;
+
+                    if (NoteCount < 10)
+                    {
+                        shiftedId = Convert.ToString(NoteCount) + "    ";
+
+                    }
+                    else if (NoteCount < 100)
+                    {
+                        shiftedId = Convert.ToString(NoteCount) + "  ";
+                    }
+                    else
+                    {
+                        shiftedId = Convert.ToString(NoteCount);
+                    }
+
+                    TextFormat(TextNote, shiftedId);
 
                     isTranscribing = false;
                     IsRecording = "";
@@ -90,20 +105,37 @@ namespace NoteIt.ViewModels
 
             NewNote = new Command(() =>
             {
-                if (Notes.Count % 14 == 0 && NoteCount>0)
+                if (Notes.Count % 14 == 0 && NoteLength > 0)
                 {
                     Notes.Clear();
-                    for (int i = NoteCount - NoteCount % 14; i < NoteCount; i++)
+                    for (int i = NoteLength - NoteLength % 14; i < NoteLength; i++)
                     {
                         Notes.Add(NotesCache[i]);
                     }
                 }
-
                 NoteCount++;
+                NoteLength++;
 
-                var recipe = new Note { Id = NoteCount, Text = "This is a sample text" };
-                Notes.Add(recipe);
-                NotesCache.Add(recipe);
+                string shiftedId;
+
+                if (NoteCount < 10)
+                {
+                    shiftedId = Convert.ToString(NoteCount) + "    ";
+                    
+                }
+                else if (NoteCount < 100)
+                {
+                    shiftedId = Convert.ToString(NoteCount) + "  ";
+                }
+                else
+                {
+                    shiftedId = Convert.ToString(NoteCount);
+                }
+                //fix to make length of 30 then split
+
+                string text = "This is a sample text that is very extra extra very very very long for testing purposes";
+
+                TextFormat(text, shiftedId);
             });
             
             Clear = new Command(() =>
@@ -111,6 +143,7 @@ namespace NoteIt.ViewModels
                 Notes.Clear();
                 NotesCache.Clear();
                 NoteCount = 0;
+                NoteLength = 0;
             });
 
             Forward = new Command(() =>
@@ -118,7 +151,7 @@ namespace NoteIt.ViewModels
                 if (Notes.Count > 0)
                 {
                     int currentMaxIndex = Notes[0].Id +13;
-                    int dif = NoteCount - currentMaxIndex;
+                    int dif = NoteLength - currentMaxIndex;
                     if (Notes.Count == 14 && dif > 0)
                     {
                         if (currentMaxIndex >= 14)
@@ -178,6 +211,64 @@ namespace NoteIt.ViewModels
                     TextNote += $"{newText}";
                 }
             });
+        }
+
+        void TextFormat(string text,string shiftedId) 
+        {
+            string cutText;
+
+            if (text.Length > 38)
+            {
+                var recipe = new Note { Id = NoteLength, Text = text.Substring(0, 38), ShiftedId = shiftedId };
+                Notes.Add(recipe);
+                NotesCache.Add(recipe);
+
+                for (int i = 38; i < text.Length; i += 38)
+                {
+                    NoteLength++;
+
+                    if (Notes.Count % 14 == 0 && NoteLength > 0)
+                    {
+                        Notes.Clear();
+                        for (int j = NoteLength - NoteLength % 14; j < NoteLength - 1; j++)
+                        {
+                            Notes.Add(NotesCache[j]);
+                        }
+                    }
+
+                    if (i + 38 >= text.Length)
+                    {
+                        recipe = new Note { Id = NoteLength, Text = text.Substring(i), ShiftedId = "       " };
+                        Notes.Add(recipe);
+                        NotesCache.Add(recipe);
+                        break;
+                    }
+                    else
+                    {
+                        cutText = text.Substring(i, 38);
+
+                        recipe = new Note { Id = NoteLength, Text = cutText, ShiftedId = "       " };
+                        Notes.Add(recipe);
+                        NotesCache.Add(recipe);
+                    }
+                }
+            }
+            else
+            {
+                if (Notes.Count % 14 == 0 && NoteLength > 0)
+                {
+                    Notes.Clear();
+                    for (int i = NoteLength - NoteLength % 14; i < NoteLength; i++)
+                    {
+                        Notes.Add(NotesCache[i]);
+                    }
+                }
+
+                NoteLength++;
+                var recipe = new Note { Id = NoteLength, Text = text, ShiftedId = shiftedId };
+                Notes.Add(recipe);
+                NotesCache.Add(recipe);
+            }
         }
     }
 }

@@ -35,26 +35,28 @@
         </Grid.ColumnDefinitions>
         <StackLayout Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
             <Image Source="notepad"  Aspect="AspectFit" Margin="0,30,0,0"/>
-            <Label Grid.Row="0" Grid.Column="2" Text="{Binding IsRecording}" FontSize="16" HorizontalTextAlignment="Center" />
+            <!--<Label Grid.Row="0" Grid.Column="2" Text="{Binding NoteLength}" FontSize="16" HorizontalTextAlignment="Center" />-->
         </StackLayout>
         <CollectionView Margin="43,78,40,0" ItemsSource="{Binding Notes}"  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal" Padding=".57145">
-                        <Label VerticalOptions="Center" Text="{Binding Id}" FontAttributes="Bold" HorizontalOptions="Start" TextColor="Black" FontSize="Medium"/>
+                        <Label VerticalOptions="Center" Text="{Binding ShiftedId}" FontAttributes="Bold" HorizontalOptions="Start" TextColor="Black" FontSize="Medium"/>
+                        <BoxView HeightRequest="5" WidthRequest="15" Color="Transparent"/>
+                        <Label VerticalOptions="Center" Text="{Binding Text}" FontAttributes="Italic" TextColor="Black" FontSize="15"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <CollectionView Margin="97,78,40,0" ItemsSource="{Binding Notes}"  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
+        <!--<CollectionView Margin="97,78,40,0" ItemsSource="{Binding Notes}"  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal" Padding=".57145">
-                        <Label VerticalOptions="Center" Text="{Binding Text}" FontAttributes="Italic" TextColor="Black" FontSize="Medium"/>
+                        <Label VerticalOptions="Center" Text="{Binding Text}" FontAttributes="Italic" TextColor="Black" FontSize="15"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>
+        </CollectionView>-->
         <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="Center">
             <ImageButton x:Name ="backward" Scale="0.7" Source="backward" BackgroundColor="Transparent" VerticalOptions="Center" Margin="20,0,0,0" Command="{Binding Backward}" Clicked="ImageButton_Clicked"/>
             <ImageButton Grid.Row="1" Grid.ColumnSpan="2" x:Name="recordingButton" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"

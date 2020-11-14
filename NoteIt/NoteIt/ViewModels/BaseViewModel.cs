@@ -45,6 +45,13 @@ namespace NoteIt.ViewModels
             get { return noteCount; }
             set { SetProperty(ref noteCount, value); } 
         }
+
+        int noteLength = 0;
+        public int NoteLength
+        {
+            get { return noteLength; }
+            set { SetProperty(ref noteLength, value); }
+        }
         
         string textNote = string.Empty;
         public string TextNote
