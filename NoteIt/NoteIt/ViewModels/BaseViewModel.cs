@@ -39,6 +39,12 @@ namespace NoteIt.ViewModels
             get { return imageSource; }
             set { SetProperty(ref imageSource, value); }
         }
+        int noteCount = 0;
+        public int NoteCount 
+        { 
+            get { return noteCount; }
+            set { SetProperty(ref noteCount, value); } 
+        }
 
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",

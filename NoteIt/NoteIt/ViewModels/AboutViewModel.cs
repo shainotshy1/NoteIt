@@ -59,11 +59,11 @@ namespace NoteIt.ViewModels
             {
                 if (Notes.Count > 0)
                 {
-                    int currentMaxIndex = Notes[Notes.Count - 1].Id;
+                    int currentMaxIndex = Notes[0].Id +13;
                     int dif = NoteCount - currentMaxIndex;
-                    if ((Notes.Count) % 14 == 0 && dif > 0)
+                    if (Notes.Count == 14 && dif > 0)
                     {
-                        if (currentMaxIndex > 14)
+                        if (currentMaxIndex >= 14)
                         {
                             Notes.Clear();
 
@@ -82,9 +82,9 @@ namespace NoteIt.ViewModels
 
             Backward = new Command(() =>
             {
-                if(Notes.Count > 0)
+                if (Notes.Count > 0)
                 {
-                    int currentMaxIndex = Notes[Notes.Count - 1].Id;
+                    int currentMaxIndex = Notes[0].Id;
 
                     if (currentMaxIndex > 14)
                     {
@@ -92,7 +92,7 @@ namespace NoteIt.ViewModels
 
                         int delta = currentMaxIndex % 14;
 
-                        for (int i = currentMaxIndex - delta - 14; i < currentMaxIndex - delta; i++)
+                        for (int i = currentMaxIndex - 15; i < currentMaxIndex - 1; i++)
                         {
                             Notes.Add(NotesCache[i]);
                         }
@@ -108,6 +108,5 @@ namespace NoteIt.ViewModels
         public Command Backward { get; }
         public ObservableCollection<Note> Notes { get; set; }
         public ObservableCollection<Note> NotesCache { get; set; }
-        public int NoteCount { get; set; }
     }
 }

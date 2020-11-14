@@ -50,7 +50,6 @@
                 <DataTemplate>
                     <StackLayout Orientation="Horizontal" Padding=".18">
                         <Label VerticalOptions="Center" Text="{Binding Text}" FontAttributes="Italic" TextColor="Black" FontSize="Medium"/>
-                        <Label Text="{Binding NoteCount}"/>
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
