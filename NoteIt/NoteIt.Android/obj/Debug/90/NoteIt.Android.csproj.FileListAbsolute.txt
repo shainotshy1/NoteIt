@@ -936,3 +936,6 @@ C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\stamp\_GenerateP
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\res\drawable\recording.png
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\res\drawable\recording2.png
+C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\res\drawable\notepad.png
+C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\res\drawable\forward.png
+C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.Android\obj\Debug\90\res\drawable\backward.png

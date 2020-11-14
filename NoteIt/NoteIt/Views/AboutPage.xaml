@@ -4,7 +4,15 @@
              x:Class="NoteIt.Views.AboutPage"
              xmlns:vm="clr-namespace:NoteIt.ViewModels"
              Title="{Binding Title}">
-    
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Test"
+                 Order="Primary"
+                 Priority="0" Command="{Binding NewNote}"/>
+        <ToolbarItem Text="Clear"
+                     Command="{Binding Clear}"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
@@ -17,19 +25,43 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*" />
+            <RowDefinition Height="6*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="8*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackLayout Grid.ColumnSpan="3" Orientation="Vertical" Spacing="10" VerticalOptions="End">
-            <Label Text="{Binding IsRecording}" FontSize="16" Padding="0,0,0,0" HorizontalTextAlignment="Center"/>
+        <StackLayout Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
+            <Image Source="notepad"  Aspect="AspectFit" Margin="0,30,0,0"/>
+            <Label Grid.Row="0" Grid.Column="2" Text="{Binding IsRecording}" FontSize="16" HorizontalTextAlignment="Center" />
         </StackLayout>
-        <ImageButton x:Name="recordingButton" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Start"
-                BackgroundColor="Transparent" Source="{Binding ImageSource}" Scale="0.3" Clicked="recordingButton_Clicked" Command="{Binding Recording}"/>
+        <CollectionView Margin="65,78,40,0" ItemsSource="{Binding Notes}"  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding=".18">
+                        <Label VerticalOptions="Center" Text="{Binding Id}" FontAttributes="Bold" HorizontalOptions="Start" TextColor="Black" FontSize="Medium"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <CollectionView Margin="100,78,40,0" ItemsSource="{Binding Notes}"  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding=".18">
+                        <Label VerticalOptions="Center" Text="{Binding Text}" FontAttributes="Italic" TextColor="Black" FontSize="Medium"/>
+                        <Label Text="{Binding NoteCount}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="Center">
+            <ImageButton x:Name ="backward" Scale="0.7" Source="backward" BackgroundColor="Transparent" VerticalOptions="Center" Margin="20,0,0,0" Command="{Binding Backward}" Clicked="ImageButton_Clicked"/>
+            <ImageButton Grid.Row="1" Grid.ColumnSpan="2" x:Name="recordingButton" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                BackgroundColor="Transparent" Source="{Binding ImageSource}" Scale="0.4" Clicked="recordingButton_Clicked" Command="{Binding Recording}"/>
+            <ImageButton x:Name = "forward" Scale="0.7" Source="forward" BackgroundColor="Transparent" VerticalOptions="Center" Margin="0,0,20,0" Command="{Binding Forward}" Clicked="ImageButton_Clicked"/>
+        </StackLayout>
+        
     </Grid>
 
 </ContentPage>

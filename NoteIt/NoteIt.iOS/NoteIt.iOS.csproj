@@ -148,4 +148,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\recording2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\backward.png" />
+  </ItemGroup>
 </Project>
