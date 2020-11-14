@@ -40,7 +40,7 @@
         <CollectionView Margin="43,78,40,0" ItemsSource="{Binding Notes}"  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Orientation="Horizontal" Padding=".16">
+                    <StackLayout Orientation="Horizontal" Padding=".57145">
                         <Label VerticalOptions="Center" Text="{Binding Id}" FontAttributes="Bold" HorizontalOptions="Start" TextColor="Black" FontSize="Medium"/>
                     </StackLayout>
                 </DataTemplate>
@@ -49,7 +49,7 @@
         <CollectionView Margin="97,78,40,0" ItemsSource="{Binding Notes}"  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Orientation="Horizontal" Padding=".16">
+                    <StackLayout Orientation="Horizontal" Padding=".57145">
                         <Label VerticalOptions="Center" Text="{Binding Text}" FontAttributes="Italic" TextColor="Black" FontSize="Medium"/>
                     </StackLayout>
                 </DataTemplate>
@@ -58,7 +58,7 @@
         <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2" VerticalOptions="Center">
             <ImageButton x:Name ="backward" Scale="0.7" Source="backward" BackgroundColor="Transparent" VerticalOptions="Center" Margin="20,0,0,0" Command="{Binding Backward}" Clicked="ImageButton_Clicked"/>
             <ImageButton Grid.Row="1" Grid.ColumnSpan="2" x:Name="recordingButton" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
-                BackgroundColor="Transparent" Source="{Binding ImageSource}" Scale="0.4" Clicked="recordingButton_Clicked" Command="{Binding Recording}"/>
+                BackgroundColor="Transparent" Source="{Binding ImageSource}" Scale="0.5" Clicked="recordingButton_Clicked" Command="{Binding Recording}"/>
             <ImageButton x:Name = "forward" Scale="0.7" Source="forward" BackgroundColor="Transparent" VerticalOptions="Center" Margin="0,0,20,0" Command="{Binding Forward}" Clicked="ImageButton_Clicked"/>
         </StackLayout>
 

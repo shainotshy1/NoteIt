@@ -150,7 +150,7 @@
     <BundleResource Include="Resources\recording.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\recording2.png" />
+    <AndroidResource Include="Resources\recording2.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\notepad.png" />
