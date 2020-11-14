@@ -1,4 +1,6 @@
-﻿using NoteIt.Models;
+﻿using Microsoft.CognitiveServices.Speech;
+using NoteIt.Models;
+using NoteIt.Services;
 using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -9,8 +11,13 @@ namespace NoteIt.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {
+        
         public AboutViewModel()
         {
+            TextNote = "";
+
+            micService = DependencyService.Resolve<IMicrophoneService>();
+
             Title = "Recording";
             IsRecording = "";
             ImageSource = "recording.png";
@@ -19,19 +26,66 @@ namespace NoteIt.ViewModels
             NotesCache = new ObservableCollection<Note>();
             NoteCount = 0;
 
-            Recording = new Command(() =>
+            Recording = new Command(async () =>
             {
+                if (recognizer == null)
+                {
+                    var config = SpeechConfig.FromSubscription(Constants.CognitiveServicesApiKey, Constants.CognitiveServicesRegion);
+                    recognizer = new SpeechRecognizer(config);
+                    recognizer.Recognized += (obj, args) =>
+                    {
+                        UpdateTranscription(args.Result.Text);
+                    };
+                }
+
+
                 if (IsRecording == "")
                 {
                     IsRecording = "Recording!";
                     ImageSource = "recording2.png";
+
+                    try
+                    {
+                        await recognizer.StartContinuousRecognitionAsync();
+                    }
+                    catch (Exception ex)
+                    {
+                        UpdateTranscription(ex.Message);
+                    }
                 }
 
                 else
                 {
+                    try
+                    {
+                        await recognizer.StopContinuousRecognitionAsync();
+                    }
+                    catch (Exception ex)
+                    {
+                        UpdateTranscription(ex.Message);
+                    }
+
+                    if (Notes.Count % 14 == 0 && NoteCount > 0)
+                    {
+                        Notes.Clear();
+                        for (int i = NoteCount - NoteCount % 14; i < NoteCount; i++)
+                        {
+                            Notes.Add(NotesCache[i]);
+                        }
+                    }
+
+                    NoteCount++;
+
+                    var recipe = new Note { Id = NoteCount, Text = TextNote };
+                    Notes.Add(recipe);
+                    NotesCache.Add(recipe);
+
+                    isTranscribing = false;
                     IsRecording = "";
                     ImageSource = "recording.png";
+                    TextNote = "";
                 }
+
             });
 
             NewNote = new Command(() =>
@@ -47,7 +101,7 @@ namespace NoteIt.ViewModels
 
                 NoteCount++;
 
-                var recipe = new Note { Id = NoteCount, Text = "This is a sample note" };
+                var recipe = new Note { Id = NoteCount, Text = "This is a sample text" };
                 Notes.Add(recipe);
                 NotesCache.Add(recipe);
             });
@@ -112,5 +166,18 @@ namespace NoteIt.ViewModels
         public Command Backward { get; }
         public ObservableCollection<Note> Notes { get; set; }
         public ObservableCollection<Note> NotesCache { get; set; }
+        public SpeechRecognizer recognizer { get; set; }
+        public IMicrophoneService micService { get; set; }
+        public bool isTranscribing { get; set; }
+        void UpdateTranscription(string newText)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                if (!string.IsNullOrWhiteSpace(newText))
+                {
+                    TextNote += $"{newText}";
+                }
+            });
+        }
     }
 }

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1P182gZQOwjUyoKwn7MoPu2s6Pl8ulslFxgE0wBVGRgyUqdlmdLfqA7Kn2cRWxYqOcwOBSYp1Tyl8qBtY6B+/g==",
+  "dgSpecHash": "NrasqXPMdXNJELI/vBd00jl57pIqkrgJTi4IPbZVh6IgLKsOVJMNCtqDqZNfXIhhmavDDNmR1bMXynt043ay3g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.iOS\\NoteIt.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Shai\\.nuget\\packages\\microsoft.cognitiveservices.speech\\1.14.0\\microsoft.cognitiveservices.speech.1.14.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+    "C:\\Users\\Shai\\.nuget\\packages\\xamarin.forms\\4.8.0.1687\\xamarin.forms.4.8.0.1687.nupkg.sha512"
   ],
   "logs": []
 }

@@ -31,5 +31,7 @@ namespace NoteIt.Views
                 await forward.ScaleTo(0.7, 180, Easing.BounceIn);
             }
         }
+
+
     }
 }

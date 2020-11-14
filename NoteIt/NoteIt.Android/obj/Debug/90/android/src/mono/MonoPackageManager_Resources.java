@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "NoteIt.Android.dll" comes first in this list. */
 		"NoteIt.Android.dll",
 		"FormsViewGroup.dll",
+		"Microsoft.CognitiveServices.Speech.csharp.dll",
 		"NoteIt.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",

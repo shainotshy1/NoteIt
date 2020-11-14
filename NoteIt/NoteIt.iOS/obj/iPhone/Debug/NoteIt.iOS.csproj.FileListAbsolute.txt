@@ -61,7 +61,7 @@ C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\coremlc\_BundleR
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\optimized\
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\NoteIt.iOS.csprojAssemblyReference.cache
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\NoteIt.iOS.csproj.CoreCompileInputs.cache
-C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\XamlC.stamp
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\NoteIt.iOS.csproj.CopyComplete
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\NoteIt.iOS.exe
 C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.iOS\obj\iPhone\Debug\NoteIt.iOS.pdb
+C:\Users\Shai\Desktop\NoteIt\NoteIt\NoteIt.iOS\bin\iPhone\Debug\Microsoft.CognitiveServices.Speech.csharp.dll

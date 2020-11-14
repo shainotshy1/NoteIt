@@ -45,6 +45,13 @@ namespace NoteIt.ViewModels
             get { return noteCount; }
             set { SetProperty(ref noteCount, value); } 
         }
+        
+        string textNote = string.Empty;
+        public string TextNote
+        {
+            get { return textNote; }
+            set { SetProperty(ref textNote, value); }
+        }
 
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",
