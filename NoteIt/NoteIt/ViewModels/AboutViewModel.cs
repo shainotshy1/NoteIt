@@ -36,9 +36,13 @@ namespace NoteIt.ViewModels
 
             NewNote = new Command(() =>
             {
-                if (Notes.Count % 14 == 0)
+                if (Notes.Count % 14 == 0 && NoteCount>0)
                 {
                     Notes.Clear();
+                    for (int i = NoteCount - NoteCount % 14; i < NoteCount; i++)
+                    {
+                        Notes.Add(NotesCache[i]);
+                    }
                 }
 
                 NoteCount++;
