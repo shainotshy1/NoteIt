@@ -17,7 +17,7 @@
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#96d1ff</Color>
@@ -40,7 +40,7 @@
         <CollectionView Margin="43,78,40,0" ItemsSource="{Binding Notes}"  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Orientation="Horizontal" Padding=".18">
+                    <StackLayout Orientation="Horizontal" Padding=".16">
                         <Label VerticalOptions="Center" Text="{Binding Id}" FontAttributes="Bold" HorizontalOptions="Start" TextColor="Black" FontSize="Medium"/>
                     </StackLayout>
                 </DataTemplate>
@@ -49,7 +49,7 @@
         <CollectionView Margin="97,78,40,0" ItemsSource="{Binding Notes}"  Grid.ColumnSpan="2" Grid.RowSpan="2" HorizontalOptions="Center">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Orientation="Horizontal" Padding=".18">
+                    <StackLayout Orientation="Horizontal" Padding=".16">
                         <Label VerticalOptions="Center" Text="{Binding Text}" FontAttributes="Italic" TextColor="Black" FontSize="Medium"/>
                     </StackLayout>
                 </DataTemplate>
@@ -61,7 +61,7 @@
                 BackgroundColor="Transparent" Source="{Binding ImageSource}" Scale="0.4" Clicked="recordingButton_Clicked" Command="{Binding Recording}"/>
             <ImageButton x:Name = "forward" Scale="0.7" Source="forward" BackgroundColor="Transparent" VerticalOptions="Center" Margin="0,0,20,0" Command="{Binding Forward}" Clicked="ImageButton_Clicked"/>
         </StackLayout>
-        
+
     </Grid>
 
 </ContentPage>
