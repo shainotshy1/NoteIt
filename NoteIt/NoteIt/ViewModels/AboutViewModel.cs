@@ -29,7 +29,6 @@ namespace NoteIt.ViewModels
 
             Recording = new Command(async () =>
             {
-                TextNote = "";
                 if (recognizer == null)
                 {
                     var config = SpeechConfig.FromSubscription(Constants.CognitiveServicesApiKey, Constants.CognitiveServicesRegion);
@@ -64,9 +63,37 @@ namespace NoteIt.ViewModels
                     }
                     catch (Exception ex)
                     {
-
                         UpdateTranscription(ex.Message);
                     }
+
+                    if (Notes.Count % 14 == 0 && NoteLength > 0)
+                    {
+                        Notes.Clear();
+                        for (int i = NoteLength - NoteLength % 14; i < NoteLength; i++)
+                        {
+                            Notes.Add(NotesCache[i]);
+                        }
+                    }
+                    NoteCount++;
+                    NoteLength++;
+
+                    string shiftedId;
+
+                    if (NoteCount < 10)
+                    {
+                        shiftedId = Convert.ToString(NoteCount) + "    ";
+
+                    }
+                    else if (NoteCount < 100)
+                    {
+                        shiftedId = Convert.ToString(NoteCount) + "  ";
+                    }
+                    else
+                    {
+                        shiftedId = Convert.ToString(NoteCount);
+                    }
+
+                    TextFormat(TextNote, shiftedId);
 
                     isTranscribing = false;
                     IsRecording = "";
@@ -104,8 +131,9 @@ namespace NoteIt.ViewModels
                 {
                     shiftedId = Convert.ToString(NoteCount);
                 }
+                //fix to make length of 30 then split
 
-                string text = "This is a sample text";
+                string text = "This is a sample text that is very extra extra very very very long for testing purposes";
 
                 TextFormat(text, shiftedId);
             });
@@ -181,35 +209,6 @@ namespace NoteIt.ViewModels
                 if (!string.IsNullOrWhiteSpace(newText))
                 {
                     TextNote += $"{newText}";
-                    if (Notes.Count % 14 == 0 && NoteLength > 0)
-                    {
-                        Notes.Clear();
-                        for (int i = NoteLength - NoteLength % 14; i < NoteLength; i++)
-                        {
-                            Notes.Add(NotesCache[i]);
-                        }
-                    }
-                    NoteCount++;
-                    NoteLength++;
-
-                    string shiftedId;
-
-                    if (NoteCount < 10)
-                    {
-                        shiftedId = Convert.ToString(NoteCount) + "    ";
-
-                    }
-                    else if (NoteCount < 100)
-                    {
-                        shiftedId = Convert.ToString(NoteCount) + "  ";
-                    }
-                    else
-                    {
-                        shiftedId = Convert.ToString(NoteCount);
-                    }
-
-                    TextFormat(TextNote, shiftedId);
-
                 }
             });
         }
@@ -218,13 +217,13 @@ namespace NoteIt.ViewModels
         {
             string cutText;
 
-            if (text.Length > 34)
+            if (text.Length > 38)
             {
-                var recipe = new Note { Id = NoteLength, Text = text.Substring(0, 34), ShiftedId = shiftedId };
+                var recipe = new Note { Id = NoteLength, Text = text.Substring(0, 38), ShiftedId = shiftedId };
                 Notes.Add(recipe);
                 NotesCache.Add(recipe);
 
-                for (int i = 34; i < text.Length; i += 34)
+                for (int i = 38; i < text.Length; i += 38)
                 {
                     NoteLength++;
 
@@ -237,7 +236,7 @@ namespace NoteIt.ViewModels
                         }
                     }
 
-                    if (i + 34 >= text.Length)
+                    if (i + 38 >= text.Length)
                     {
                         recipe = new Note { Id = NoteLength, Text = text.Substring(i), ShiftedId = "       " };
                         Notes.Add(recipe);
@@ -246,7 +245,7 @@ namespace NoteIt.ViewModels
                     }
                     else
                     {
-                        cutText = text.Substring(i, 34);
+                        cutText = text.Substring(i, 38);
 
                         recipe = new Note { Id = NoteLength, Text = cutText, ShiftedId = "       " };
                         Notes.Add(recipe);
@@ -259,12 +258,13 @@ namespace NoteIt.ViewModels
                 if (Notes.Count % 14 == 0 && NoteLength > 0)
                 {
                     Notes.Clear();
-                    for (int j = NoteLength - NoteLength % 14; j < NoteLength - 1; j++)
+                    for (int i = NoteLength - NoteLength % 14; i < NoteLength; i++)
                     {
-                        Notes.Add(NotesCache[j]);
+                        Notes.Add(NotesCache[i]);
                     }
                 }
 
+                NoteLength++;
                 var recipe = new Note { Id = NoteLength, Text = text, ShiftedId = shiftedId };
                 Notes.Add(recipe);
                 NotesCache.Add(recipe);

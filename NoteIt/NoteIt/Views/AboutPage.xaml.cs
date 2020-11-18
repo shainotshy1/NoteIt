@@ -1,5 +1,4 @@
-﻿using NoteIt.ViewModels;
-using System;
+﻿using System;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -33,11 +32,6 @@ namespace NoteIt.Views
             }
         }
 
-        protected override void OnAppearing()
-        {
 
-
-            base.OnAppearing();
-        }
     }
 }
