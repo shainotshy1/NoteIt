@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "YbdFuMK1sIUXG3H6ZuuOWxN7Kxe7LlPh6nmejugjreRFRy6xMDI6WYt9vWgncEZAJLujn9c2/Clzvkfn3mWYlQ==",
+  "dgSpecHash": "OKpXpKJ/8EQfMG+UcmjBXYtqxMkhLSmC9ogDsMMrhPUHG51Hm7bzu+d8AyiO8bqCPrb5LF3HGLzBrozAfjoIvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj",
+  "projectFilePath": "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Shai\\.nuget\\packages\\microsoft.cognitiveservices.speech\\1.14.0\\microsoft.cognitiveservices.speech.1.14.0.nupkg.sha512",
-    "C:\\Users\\Shai\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Shai\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Shai\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\Shai\\.nuget\\packages\\xamarin.forms\\4.8.0.1687\\xamarin.forms.4.8.0.1687.nupkg.sha512"
+    "C:\\Users\\chall\\.nuget\\packages\\microsoft.cognitiveservices.speech\\1.14.0\\microsoft.cognitiveservices.speech.1.14.0.nupkg.sha512",
+    "C:\\Users\\chall\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\chall\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\chall\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\chall\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\chall\\.nuget\\packages\\xamarin.forms\\4.8.0.1687\\xamarin.forms.4.8.0.1687.nupkg.sha512"
   ],
   "logs": []
 }

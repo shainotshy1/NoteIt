@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj": {}
+    "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj": {
+    "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj",
+        "projectUniqueName": "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj",
         "projectName": "NoteIt.Android",
-        "projectPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj",
-        "packagesPath": "C:\\Users\\Shai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt.Android\\obj\\",
+        "projectPath": "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt.Android\\NoteIt.Android.csproj",
+        "packagesPath": "C:\\Users\\chall\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Shai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chall\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj": {
-                "projectPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj"
+              "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj": {
+                "projectPath": "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj"
               }
             }
           }
@@ -62,20 +62,20 @@
         }
       }
     },
-    "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj": {
+    "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj",
+        "projectUniqueName": "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj",
         "projectName": "NoteIt",
-        "projectPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj",
-        "packagesPath": "C:\\Users\\Shai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shai\\Desktop\\NoteIt\\NoteIt\\NoteIt\\obj\\",
+        "projectPath": "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt\\NoteIt.csproj",
+        "packagesPath": "C:\\Users\\chall\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chall\\Documents\\GitHub\\NoteIt\\NoteIt\\NoteIt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Shai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chall\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -129,7 +129,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
