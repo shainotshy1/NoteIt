@@ -1,4 +1,4 @@
 # NoteIt
 Adding a readme to note changes and the like
 
-//todo, find out and plan what to do
+upcoming changes and such will be found in issues
