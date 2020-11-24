@@ -3,6 +3,8 @@ using NoteIt.Models;
 using NoteIt.Services;
 using System;
 using System.Collections.ObjectModel;
+using System.IO;
+using System.Net;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -64,9 +66,15 @@ namespace NoteIt.ViewModels
                     }
                     catch (Exception ex)
                     {
-
                         UpdateTranscription(ex.Message);
                     }
+
+                    //Only testing purposes*********
+                    if (Notes.Count > 0)
+                    {
+                        SmmryCall(Notes[Notes.Count - 1].Text);
+                    }
+                    //******************************
 
                     isTranscribing = false;
                     IsRecording = "";
@@ -218,13 +226,13 @@ namespace NoteIt.ViewModels
         {
             string cutText;
 
-            if (text.Length > 34)
+            if (text.Length > 30)
             {
-                var recipe = new Note { Id = NoteLength, Text = text.Substring(0, 34), ShiftedId = shiftedId };
+                var recipe = new Note { Id = NoteLength, Text = text.Substring(0, 30), ShiftedId = shiftedId };
                 Notes.Add(recipe);
                 NotesCache.Add(recipe);
 
-                for (int i = 34; i < text.Length; i += 34)
+                for (int i = 30; i < text.Length; i += 30)
                 {
                     NoteLength++;
 
@@ -237,7 +245,7 @@ namespace NoteIt.ViewModels
                         }
                     }
 
-                    if (i + 34 >= text.Length)
+                    if (i + 30 >= text.Length)
                     {
                         recipe = new Note { Id = NoteLength, Text = text.Substring(i), ShiftedId = "       " };
                         Notes.Add(recipe);
@@ -246,7 +254,7 @@ namespace NoteIt.ViewModels
                     }
                     else
                     {
-                        cutText = text.Substring(i, 34);
+                        cutText = text.Substring(i, 30);
 
                         recipe = new Note { Id = NoteLength, Text = cutText, ShiftedId = "       " };
                         Notes.Add(recipe);
@@ -269,6 +277,93 @@ namespace NoteIt.ViewModels
                 Notes.Add(recipe);
                 NotesCache.Add(recipe);
             }
+        }
+        void SmmryCall(string str)
+        {
+            /*
+            //Testing GET
+            string text = null;
+
+            //string link = String.Format("https://api.smmry.com/&SM_API_KEY=D0AC86871F");
+            string link = String.Format("http://jsonplaceholder.typicode.com/posts");
+            WebRequest requestObjGet = WebRequest.Create(link);
+            requestObjGet.Method = "GET";
+            HttpWebResponse responseObjGet = null;
+            responseObjGet = (HttpWebResponse)requestObjGet.GetResponse();
+
+            string strResult = null;
+            using (Stream stream = responseObjGet.GetResponseStream())
+            {
+                StreamReader sr = new StreamReader(stream);
+                strResult = sr.ReadToEnd();
+                sr.Close();
+            }
+
+            //Testing POST
+
+            WebRequest requestObjPost = WebRequest.Create(link);
+            requestObjPost.Method = "POST";
+            requestObjPost.ContentType = "application/json";
+
+            text = "{\"title\":\"testdata\",\"body\":\"testbody\",\"userId\":\"50\"}";
+
+            using(var streamWriter = new StreamWriter(requestObjPost.GetRequestStream()))
+            {
+                streamWriter.Write(text);
+                streamWriter.Flush();
+                streamWriter.Close();
+
+
+                var httpResponse = (HttpWebResponse)requestObjPost.GetResponse();
+
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+
+                    TextFormat(result, Convert.ToString(NoteCount));
+                    TextFormat(text, Convert.ToString(NoteCount));
+                }
+            }
+            */
+            
+            string link = String.Format("https://api.smmry.com/&SM_API_KEY=D0AC86871F");
+            WebRequest requestObjGet = WebRequest.Create(link);
+            requestObjGet.Method = "GET";
+            HttpWebResponse responseObjGet = null;
+            responseObjGet = (HttpWebResponse)requestObjGet.GetResponse();
+
+            string strResult = null;
+            using (Stream stream = responseObjGet.GetResponseStream())
+            {
+                StreamReader sr = new StreamReader(stream);
+                strResult = sr.ReadToEnd();
+                sr.Close();
+            }
+
+            WebRequest requestObjPost = WebRequest.Create(link);
+            requestObjPost.Method = "POST";
+            requestObjPost.ContentType = "application/json";
+
+            string text = "{\"title\":\"testdata\",\"body\":\"testbody\",\"userId\":\"50\"}";
+
+            using(var streamWriter = new StreamWriter(requestObjPost.GetRequestStream()))
+            {
+                streamWriter.Write(text);
+                streamWriter.Flush();
+                streamWriter.Close();
+
+
+                var httpResponse = (HttpWebResponse)requestObjPost.GetResponse();
+
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+
+                    TextFormat(result, Convert.ToString(NoteCount));
+                    TextFormat(text, Convert.ToString(NoteCount));
+                }
+            }
+
         }
     }
 }

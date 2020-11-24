@@ -10,6 +10,8 @@ namespace NoteIt.Models
         // and can be found and regenerated in the Azure portal
         public static string CognitiveServicesApiKey = "48d47c48e6ba4e0299ddf958f3581a8b";
 
+        public static string SymmryApiKey = "D0AC86871F";
+
         // Endpoint is based on your configured region, for example "westus"
         public static string CognitiveServicesRegion = "westus";
     }
